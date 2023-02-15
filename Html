@@ -1,0 +1,10 @@
+from difflib import SequenceMatcher
+
+def similar(a, b):
+    return SequenceMatcher(None, a, b).ratio()
+
+with open('file.txt', 'r') as file:
+    content = file.read()
+    texts = content.split()
+    for i in range(len(texts)):
+        for j in range(i
